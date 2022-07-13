@@ -1,0 +1,399 @@
+                                A JOB READY BOOTCAMP IN C++,DSA And IOT
+                                         ASSIGNMENT-3
+                                Decision Control Statements
+
+1. WAP To check whether the given number is positive or non positive
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter n:");
+    scanf("%d",&n);
+
+    if(n>0)
+    {
+        printf("%d is a Positive Number",n);
+    }
+    else
+    {
+        printf("%d is a Non Positive Number",n);
+    }
+    return 0;
+}
+
+2. WAP to check whether the given number is divisible by 5 or not.
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter n:");
+    scanf("%d",&n);
+
+     if(n%5==0)
+     {
+         printf("%d is divisible by 5",n);
+     }
+     else
+     {
+         printf("%d is not divisible by 5",n);
+     }
+     return 0;
+}
+
+3.  WAP to check whether the given number is even number or an odd number.
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter n:");
+    scanf("%d",&n);
+
+    if(n%2==0)
+    {
+        printf("%d is an even number",n);
+    }
+    else
+    {
+        printf("%d is an odd number",n);
+    }
+    return 0;
+}
+
+4.  WAP to check whether the given number is even number or an odd number without using % operator.
+
+#include<stdio.h>
+int main()
+ {
+     int n;
+    printf("Enter n:");
+    scanf("%d",&n);
+
+    if(n & 1)
+    {
+        printf("%d is an odd number",n);
+    }
+    else
+    {
+        printf("%d is an even number",n);
+    }
+    return 0;
+ }
+
+5.  WAP to check whether the given number is 3 digit or not.
+
+#include<stdio.h>
+int main()
+ {
+     int n;
+    printf("Enter n:");
+    scanf("%d",&n);
+
+    if (n>99 && n<1000)
+    {
+        printf("%d is 3 digit Number",n);
+    }
+    else
+    {
+        printf("%d is not a 3 digit Number",n);
+    }
+    return 0;
+ }
+
+ 6. WAP To print greater between two numbers.Print one number of both are the same
+
+ #include<stdio.h>
+ int main()
+ {
+     int a,b;
+     printf("Enter a,b:");
+     scanf("%d%d",&a,&b);
+
+     if(a>b)
+     {
+         printf("%d is greater",a);
+     }
+     else if(a==b)
+     {
+         printf("%d==%d, so Both are same",a,b);
+     }
+     else
+        printf("%d is greater",b);
+        return 0;
+ }
+
+ 7. WAP to check whether roots of a given quadratic equation are real & distinct, real & equal or imaginary roots.
+
+ #include<stdio.h>
+ #include<math.h>
+ int main()
+ {
+   float a,b,c,d;
+   printf("Enter a,b,c:");
+   scanf("%f%f%f",&a,&b,&c);
+
+   d = b*b - 4*a*c;
+   printf("%f\n",d);
+
+  if(d>0)
+   {
+       printf("Roots are real and distinct ");
+   }
+   else if(d==0)
+   {
+    printf("Roots are real and equal");
+   }
+   else
+   {
+       printf("Roots are imaginary");
+   }
+   return 0;
+ }
+
+ 8. WAP To check the given year is leap year or not.
+
+ #include<stdio.h>
+ int main()
+ {
+     int year;
+     printf("Enter year:");
+     scanf("%d",&year);
+
+     if(year%400==0)
+        printf("%d is a leap year",year);
+
+     else if(year%100==0)
+         printf("%d is not a leap year",year);
+
+     else if(year%4==0)
+         printf("%d is a leap year",year);
+
+     else
+         printf("%d is not a leap year",year);
+         return 0;
+ }
+
+ 9. WAP TO find the greatest among three given numbers. Print number once if the greatest number appears 2 or 3 times.
+
+ #include<stdio.h>
+#include<conio.h>
+void main()
+{
+   int a,b,c;
+
+   printf("Enter a,b,c:");
+   scanf("%d%d%d",&a,&b,&c);
+
+
+
+    if((a>=b) && (a>=c))
+   {
+       printf("%d is greatest",a);
+   }
+
+   else if((b>=a) && (b>=c))
+   {
+        printf("%d is greatest",b);
+   }
+
+   else
+    printf("%d is greatest",c);
+
+   return 0;
+
+}
+
+10. WAP which takes the cost price and selling price of a product from the user.Now calculate and print profit or loss percentage.
+
+#include<stdio.h>
+int main()
+{
+    float  cp,p,l,sp,pp,lp;//cost price,profit,loss,selling price,profit percentage,loss percentage.
+    printf("Enter cp,sp:");
+    scanf("%f%f",&cp,&sp);
+
+    if(sp>cp)
+    {
+        printf("PROFIT\n");
+        p=sp-cp;
+        printf("Profit=%f\n",p);
+        pp=p/cp*100;
+        printf("Profit Percentage=%f",pp);
+    }
+    else
+    {
+        printf("LOSS\n");
+        l=cp-sp;
+        printf("Loss=%f\n",l);
+        lp=l/cp*100;
+        printf("Loss Percentage=%f",lp);
+    }
+    return 0;
+
+}
+
+11. WAP to take marks of 5 subjects from the user. Assume marks are given out from 100 and passing marks is 33.
+    Now whether the candidate passed the examination or failed.
+
+#include<stdio.h>
+int main()
+{
+    float s1,s2,s3,s4,s5,tm,tp;//marks in subject 1,2,3,4,5,total marks,total percentage.
+    printf("Enter s1,s2,s3,s4,s5:");
+    scanf("%f%f%f%f%f",&s1,&s2,&s3,&s4,&s5);
+    tm=s1+s2+s3+s4+s5;
+    tp=tm/500 *100;
+    printf("Total Marks=%f\nTotal Percentage=%f\n",tm,tp);
+
+    if(tp>=33)
+        printf("Candidate Passed with Percentage=%f",tp);
+    else
+        printf("Candidate Failed with Percentage=%f",tp);
+    return 0;
+}
+
+12. WAP to check whether a given alphabet is in upper case or lower case.
+
+#include<stdio.h>
+int main()
+{
+    char character;
+    printf("Enter character:");
+    scanf("%c",&character);
+    if(character>='A' && character<='Z')
+        printf("%c is in upper case",character);
+
+    if (character>='a' && character<='z')
+        printf("%c is in lower case",character);
+        return 0;
+}
+
+13. WAP to check whether a given number is divisible by 2 and divisible by 3.
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter n:");
+    scanf("%d",&n);
+
+    if(n%2==0 && n%3==0)
+    {
+        printf("%d is divisible by 3 and divisible by 2",n);
+    }
+    else
+        printf("%d is not divisible by 3 and divisible by 2",n);
+        return 0;
+
+}
+
+14. WAP To check whether the given number is divisible by 7 0r divisible by 3.
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter n:");
+    scanf("%d",&n);
+
+    if(n%7==0 && n%3==0)
+        printf("%d is divisible by both 7 and 3",n);
+
+    else if(n%7==0)
+    {
+        printf("%d is divisible by 7",n);
+    }
+    else if( n%3==0)
+        printf("%d is divisible by 3",n);
+
+    else
+        printf("%d is neither divided by 7 and nor by 3",n);
+        return 0;
+
+}
+
+15. WAP to check whether the given number is positive,negative or zero.
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter n:");
+    scanf("%d",&n);
+
+    if(n>0)
+        printf("%d is Positive",n);
+
+    else if(n==0)
+        printf("Zero");
+
+    else
+        printf("%d is negative",n);
+    return 0;
+}
+
+16. WAP to check whether the given character is an alphabet(upper case),alphabet(lower case),a digit or a special character.
+
+#include<stdio.h>
+int main()
+{
+    char c;
+    printf("Enter character:");
+    scanf("%c",&c);
+
+    if(c>='0' && c<='9')
+        printf("%c is a digit",c);
+
+    else if(c>='A' && c<='Z')
+        printf("%c is an alphabet(upper case)",c);
+
+    else if(c>='a' && c<='z')
+        printf("%c is an alphabet(lower case)",c);
+
+    else
+        printf("%c is a special character",c);
+    return 0;
+}
+
+17. WAP which takes the length of sides of triangle as an input. Display whether the triangle is valid or not.
+
+#include<stdio.h>
+int main()
+{
+    int AB,BC,CA;
+    printf("Enter lengths AB,BC,CA:");
+    scanf("%d%d%d",&AB,&BC,&CA);
+
+    if(AB+BC>CA && AB+CA>BC && BC+CA>AB)
+        printf("Triangle is valid");
+    else
+        printf("Triangle is  invalid");
+    return 0;
+}
+
+18. WAP Which takes the month number as an input and display number of days in that month,
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter month number:");
+    scanf("%d",&n);
+
+    if(n==1 || n==3 || n==5 || n==7 || n==8 || n==10 || n==12)
+        printf("31 DAYS");
+
+    else if(n==4 || n==6 || n==9 || n==11 )
+        printf("30 DAYS");
+
+    else if(n==2)
+        printf("28 or 29 DAYS");
+    else
+        printf("It is not a month");
+    return 0;
+}
+
+
+
